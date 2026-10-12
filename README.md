@@ -2,9 +2,9 @@
 
 Code for:
 
-> [Authors]. Long-range PCR amplification and nanopore sequencing of 8–10 kb mitochondrial fragments from environmental DNA. *Molecular Ecology Resources* (in review).
+> Stephanie A. Matthews, Olivia M. Scott, Yin Cheong Aden Ip, Elizabeth A. Allan, Ryan P. Kelly. Long-range PCR amplification and nanopore sequencing of 8–10 kb mitochondrial fragments from environmental DNA. *Molecular Ecology Resources* (in review).
 
-Environmental DNA from Puget Sound field samples and an aquarium tank was amplified as two half-mitogenome fragments: 8.0 kb (with 12S) and 9.5 kb (with COI). The amplicons were sequenced on Oxford Nanopore. This pipeline classifies every read directly with BLAST against a vertebrate mitochondrial database. It does not cluster reads or build consensus sequences. The scripts then produce the detection statistics, figures and supplementary tables in the paper.
+Environmental DNA from Puget Sound field samples and an aquarium tank was amplified as two half-mitogenome fragments: 8.0 kb (with 12S) and 9.5 kb (with COI). The amplicons were sequenced on Oxford Nanopore. This pipeline classifies every read directly with BLAST against a vertebrate mitochondrial database.The scripts then produce the detection statistics, figures and supplementary tables in the paper.
 
 The same pipeline also scores ONT MiFish (12S, ~170 bp) reads from the same aquarium tank (Ip et al. 2026), which gives a comparison between the two assays.
 
@@ -22,8 +22,8 @@ conda activate lrpcr
 
 ## Data
 
-- **Reads:** the raw nanopore reads (pass and fail, all barcodes) are in the NCBI Sequence Read Archive under BioProject [PENDING].
-- **Database:** reads were searched against `vert_mtDNA`, which holds all vertebrate mitochondrial records in NCBI core_nt (downloaded 7 October 2026; 2,239,547 records). The GI and accession of every record are listed in Appendix 4 of the paper (`run_appendix4_gi_list.slurm`).
+- **Reads:** the raw nanopore reads (pass and fail, all barcodes) are in the NCBI Sequence Read Archive under BioProject PRJNA1542106.
+- **Database:** reads were searched against `vert_mtDNA`, which holds all vertebrate mitochondrial records in NCBI core_nt (downloaded 7 October 2026; 2,239,547 records). The  accession of every record are listed in Appendix 4 of the paper (`run_appendix4_gi_list.slurm`).
 - **Sample tables:** these are in `lists/`.
 
 | File | Contents |
@@ -100,4 +100,4 @@ Every threshold is a command-line option (`python3 lrpcr_assign.py --help`). The
 
 ## Citation
 
-If you use this code, please cite the paper above. [License to be added.]
+If you use this code, please cite the paper above. 
