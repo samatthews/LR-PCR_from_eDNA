@@ -1,0 +1,25 @@
+﻿Final samples,SampleID,Barcode_text,demulti,Station_num,Station_name,Basin,bottom_depth,Source,lat,lon
+1,P28-A,1,barcode01,28,North of West Pt ,Central Sound,197,Field,47.703,-122.454
+2,P28-B,2,barcode02,28,North of West Pt ,Central Sound,197,Field,47.703,-122.454
+3,P28-C,3,barcode03,28,North of West Pt ,Central Sound,197,Field,47.703,-122.454
+4,P1-A,4,barcode04,1,Gedney Island,Whidbey ,106,Field,48.016,-122.302
+5,P1-B,5,barcode05,1,Gedney Island,Whidbey ,106,Field,48.016,-122.302
+6,P1-C,6,barcode06,1,Gedney Island,Whidbey ,106,Field,48.016,-122.302
+7,P3-A,7,barcode07,3,Saratoga Passage,Whidbey ,150,Field,48.108,-122.492
+8,P3-B,8,barcode08,3,Saratoga Passage,Whidbey ,150,Field,48.108,-122.492
+9,P3-C,9,barcode09,3,Saratoga Passage,Whidbey ,150,Field,48.108,-122.492
+10,P4-A,10,barcode10,4,Possession Sound,Main Basin,242,Field,48.242,-122.555
+11,P4-B,11,barcode11,4,Possession Sound,Main Basin,242,Field,48.242,-122.555
+12,P4-C,12,barcode12,4,Possession Sound,Main Basin,242,Field,48.242,-122.555
+13,P7-A,13,barcode13,7,Mutiny Bay,Admiralty,77,Field,47.981,-122.621
+14,P7-B,14,barcode14,7,Mutiny Bay,Admiralty,77,Field,47.981,-122.621
+15,P7-C,15,barcode15,7,Mutiny Bay,Admiralty,77,Field,47.981,-122.621
+16,P38-A,16,barcode16,38,Carr Inlet ,South Sound,101,Field,47.277,-122.702
+17,P38-B,17,barcode17,38,Carr Inlet ,South Sound,101,Field,47.277,-122.702
+18,P38-C,18,barcode18,38,Carr Inlet ,South Sound,101,Field,47.277,-122.702
+19,EB-4/29,19,barcode19,EB,,NC,,NC,,
+20,AQ202408-A,20,barcode20,AQ,WOWW,PC,,Aquarium,,
+21,AQ202408-B,21,barcode21,AQ,WOWW,PC,,Aquarium,,
+22,AQ202408-C,22,barcode22,AQ,WOWW,PC,,Aquarium,,
+23,NTC-8kb,23,barcode23,NTC,,NC,,NC,,
+24,NTC-9.5kb,24,barcode24,NTC,,NC,,NC,,

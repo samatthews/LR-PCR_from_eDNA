@@ -1,0 +1,104 @@
+# Regional species list for lrpcr_assign.py (added Oct 8, 2026).
+# A read assigned to a species NOT on this list is reported at genus level instead.
+# Applied to both assays (LR-PCR and MiFish). One species per line; text after # is ignored.
+#
+# Region: Salish Sea (Pietsch & Orr 2019, Fishes of the Salish Sea). The list covers every
+# species detected so far in either assay that occurs in the region, every species on the
+# Seattle Aquarium tank list, the local species used by the LOCAL rules in lrpcr_assign.py,
+# and other common Salish Sea fishes. It is NOT a complete checklist: lrpcr_assign.py prints
+# every species it moves to genus level, so check that printout after each run and add any
+# regional species that should have been kept.
+# CHECK against Pietsch & Orr: Sebastes diploproa and Sebastes zacentrus (MiFish detections).
+
+# --- Seattle Aquarium tank list (lists/aquarium_species.tsv)
+Anarrhichthys ocellatus
+Clupea pallasii
+Hemilepidotus hemilepidotus
+Hemilepidotus spinosus
+Hexagrammos decagrammus
+Hexagrammos lagocephalus
+Oncorhynchus gorbuscha
+Oncorhynchus kisutch
+Parophrys vetulus
+Pleuronichthys coenosus
+Rhinogobiops nicholsii
+Scorpaenichthys marmoratus
+Sebastes babcocki
+Sebastes caurinus
+Sebastes entomelas
+Sebastes flavidus
+Sebastes maliger
+Sebastes melanops
+Sebastes mystinus
+Sebastes nebulosus
+Sebastes nigrocinctus
+Sebastes paucispinis
+Sebastes pinniger
+Sebastes rosaceus
+Sebastes ruberrimus
+
+# --- Other species detected by LR-PCR (field or aquarium)
+Anoplarchus purpurescens
+Apodichthys flavidus
+Artedius harringtoni
+Aulorhynchus flavidus
+Beringraja binoculata
+Caliraja rhina
+Citharichthys stigmaeus
+Cymatogaster aggregata
+Engraulis mordax
+Gadus chalcogrammus
+Hippoglossoides elassodon
+Icelinus borealis
+Lepidopsetta bilineata
+Lycodopsis pacificus
+Lyopsetta exilis
+Merluccius productus
+Myoxocephalus polyacanthocephalus
+Pholis ornata
+Platichthys stellatus
+Psettichthys melanostictus
+Sebastes auriculatus
+Squalus suckleyi
+
+# --- Other regional species detected by MiFish (Ip et al. 2026 data)
+Artedius fenestralis
+Chitonotus pugetensis
+Citharichthys sordidus
+Enophrys bison
+Hydrolagus colliei
+Lepidogobius lepidus
+Oncorhynchus keta
+Oncorhynchus tshawytscha
+Oxylebius pictus
+Sebastes diploproa      # CHECK
+Sebastes zacentrus      # CHECK
+
+# --- Local species used by the LOCAL rules, and other common Salish Sea fishes
+Ammodytes personatus
+Anoplopoma fimbria
+Atheresthes stomias
+Embiotoca lateralis
+Eopsetta jordani
+Gadus macrocephalus
+Gasterosteus aculeatus
+Glyptocephalus zachirus
+Hexagrammos stelleri
+Hippoglossus stenolepis
+Hypomesus pretiosus
+Isopsetta isolepis
+Leptocottus armatus
+Lumpenus sagitta
+Microgadus proximus
+Microstomus pacificus
+Oncorhynchus mykiss
+Oncorhynchus nerka
+Ophiodon elongatus
+Phanerodon furcatus
+Porichthys notatus
+Rhacochilus vacca
+Sebastes elongatus
+Sebastes emphaeus
+Sebastes proriger
+Syngnathus leptorhynchus
+Thaleichthys pacificus
