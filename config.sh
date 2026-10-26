@@ -5,8 +5,8 @@
 # ---------------------------------------------------------------------------
 
 # 1. PATHS -------------------------------------------------------------------
-PROJECT_DIR="$HOME/lrpcr_blast"                 # this folder
-FASTQ_DIR="/path/to/fastq_pass_raw"             # MinKNOW pass folder with barcodeNN/ subfolders
+PROJECT_DIR="/Users/stephaniematthews/Documents/Rockfish/MinION_steph/MolEcolRevisions/lrpcr_blast"                 # this folder
+FASTQ_DIR="/Users/stephaniematthews/Documents/Rockfish/MinION_steph/LRPCR_Manuscript_Analysis/LRPCR_20251120/no_sample_id/20251120_2032_MD-100902_FBE54526_4090b961/fastq_pass_raw"             # MinKNOW pass folder with barcodeNN/ subfolders
                                                 # (duplicate copies of a chunk are used once;
                                                 # non-barcode folders are skipped), or one
                                                 # .fastq/.fastq.gz file per sample
@@ -21,7 +21,7 @@ LOG_DIR="$PROJECT_DIR/logs"                     # runtime and peak-memory logs (
 
 # Samples that are aquarium positive controls (names = barcode folder or file stem).
 # Used by the calibration step. Example: AQ_SAMPLES="barcode19 barcode20 barcode21"
-AQ_SAMPLES=""
+AQ_SAMPLES="barcode20 barcode21 barcode22"
 
 # 2. COMPUTE -----------------------------------------------------------------
 THREADS=8

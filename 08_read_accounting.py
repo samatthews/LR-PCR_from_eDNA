@@ -7,7 +7,7 @@ Steps (reads):
   3 blast_hit           >= 1 reference with >= 2,000 bp aligned
   4 assigned            classified at family level or finer (>= 90% identity)
   5 species             classified to species (>= 98% identity, LCA within 0.5%)
-  6 species_after_bleed species-level reads left after the barcode-bleed filter (0.5%)
+  6 species_after_bleed species-level reads left after the 1% barcode-bleed filter
 
 Usage (from the project folder, env active):
   python3 08_read_accounting.py raw_read_totals.tsv

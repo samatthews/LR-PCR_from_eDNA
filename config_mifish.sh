@@ -17,7 +17,7 @@ source "$(dirname "${BASH_SOURCE[0]}")/config.sh"
 ASSAY_LABEL="MiFish"        # one amplicon: all reads get this label instead of 8.0kb/9.5kb
 
 # 1. PATHS -------------------------------------------------------------------
-MIFISH_DIR="/path/to/mifish_fasta"   # one file per sample: .fasta/.fa(.gz), or .fastq(.gz)
+MIFISH_DIR="/Users/stephaniematthews/Documents/Rockfish/MinION_steph/MolEcolRevisions/lrpcr_blast/mifish/demux/ontbarcoder"   # one file per sample: .fasta/.fa(.gz), or .fastq(.gz)
                                      # the file name (minus extension) becomes the sample name
 MIFISH_ROOT="$PROJECT_DIR/mifish"
 READ_DIR="$MIFISH_ROOT/reads"
@@ -28,7 +28,7 @@ LOG_DIR="$MIFISH_ROOT/logs"
 
 # Aquarium (WOWW tank) MiFish samples, by sample name (file name without extension).
 # Example: AQ_SAMPLES="18_mifish_bt1_a_all 19_mifish_bt1_b_all 20_mifish_bt1_c_all"
-AQ_SAMPLES=""
+AQ_SAMPLES="18_mifish_bt1_a_all 18_mifish_bt1_b_all 18_mifish_bt1_c_all 19_mifish_bt2_a_all 19_mifish_bt2_b_all 19_mifish_bt2_c_all 20_mifish_bt3_a_all 20_mifish_bt3_b_all 20_mifish_bt3_c_all"
 
 # 2. READ FILTERING ----------------------------------------------------------
 # Primer-trimmed MiFish-U inserts are ~160-190 bp. The window drops the ~250 bp

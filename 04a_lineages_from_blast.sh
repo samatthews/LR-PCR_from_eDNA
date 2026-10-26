@@ -28,14 +28,8 @@ touch "$LIN"
 
 # Every taxid in column 3 (staxids; several taxids are separated by ';' - all are kept).
 TMP="$REF_DIR/.taxids_from_blast.txt"
-# awk keeps each taxid once as it reads (no big sort), and reports progress per file:
-# MiFish results can hold tens of millions of rows.
-: > "$TMP"
-for f in "$SRC"/*.blast.tsv*; do
-  echo "  reading $(basename "$f")" >&2
-  gzip -dcf "$f"
-done | awk -F'\t' '{ n = split($3, a, ";"); for (i = 1; i <= n; i++) if (a[i] ~ /^[0-9]+$/ && a[i] != "0" && !(a[i] in s)) { s[a[i]] = 1; print a[i] } }' |
-  sort -u > "$TMP"
+for f in "$SRC"/*.blast.tsv*; do gzip -dcf "$f"; done | cut -f3 | tr ';' '\n' |
+  grep -E '^[0-9]+$' | grep -vx 0 | sort -u > "$TMP"
 NEW="$REF_DIR/.taxids_new.txt"
 cut -f1 "$LIN" | sort -u | comm -23 "$TMP" - > "$NEW"
 echo "$(wc -l < "$TMP" | tr -d ' ') taxids in the BLAST results; $(wc -l < "$NEW" | tr -d ' ') not yet in taxid_lineage.tsv"

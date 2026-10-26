@@ -1,0 +1,100 @@
+Binomial GLMs: cbind(replicates detected, replicates not detected) ~ log10(mean reads per positive replicate)
+
+######## Fig A: LR-PCR ########
+
+==== Puget Sound (field) ====
+n = 75 species x station (x fragment) combinations; replicates per station = 3 
+              Estimate Std. Error   z value     Pr(>|z|)
+(Intercept) -0.5914849  0.2386078 -2.478901 1.317880e-02
+log_reads    1.0581286  0.2272425  4.656385 3.218092e-06
+Residual deviance: 64.57 on 73 df
+Likelihood-ratio test vs intercept-only:
+Analysis of Deviance Table
+
+Model 1: cbind(n_occ, n_trials - n_occ) ~ 1
+Model 2: cbind(n_occ, n_trials - n_occ) ~ log_reads
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1        74     93.598                          
+2        73     64.573  1   29.024 7.147e-08 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+==== Seattle Aquarium ====
+n = 43 species x station (x fragment) combinations; replicates per station = 3 
+             Estimate Std. Error   z value     Pr(>|z|)
+(Intercept) -1.129219  0.4744631 -2.379993 1.731295e-02
+log_reads    1.632579  0.3149732  5.183231 2.180752e-07
+Residual deviance: 26.26 on 41 df
+Likelihood-ratio test vs intercept-only:
+Analysis of Deviance Table
+
+Model 1: cbind(n_occ, n_trials - n_occ) ~ 1
+Model 2: cbind(n_occ, n_trials - n_occ) ~ log_reads
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1        42     68.551                          
+2        41     26.260  1   42.291 7.865e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+######## Fig B: aquarium, MiFish vs LR-PCR ########
+
+==== MiFish ====
+n = 31 species x station (x fragment) combinations; replicates per station = 3 
+              Estimate Std. Error   z value   Pr(>|z|)
+(Intercept) -0.2923521  0.5386546 -0.542745 0.58730538
+log_reads    0.6945022  0.2712452  2.560422 0.01045452
+Residual deviance: 44.38 on 29 df
+Likelihood-ratio test vs intercept-only:
+Analysis of Deviance Table
+
+Model 1: cbind(n_occ, n_trials - n_occ) ~ 1
+Model 2: cbind(n_occ, n_trials - n_occ) ~ log_reads
+  Resid. Df Resid. Dev Df Deviance Pr(>Chi)   
+1        30     52.743                        
+2        29     44.379  1   8.3641 0.003827 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+==== LR-PCR ====
+n = 24 species x station (x fragment) combinations; replicates per station = 3 
+             Estimate Std. Error   z value     Pr(>|z|)
+(Intercept) -1.938318  0.8654173 -2.239750 0.0251071737
+log_reads    1.901486  0.5263665  3.612476 0.0003032872
+Residual deviance: 13.91 on 22 df
+Likelihood-ratio test vs intercept-only:
+Analysis of Deviance Table
+
+Model 1: cbind(n_occ, n_trials - n_occ) ~ 1
+Model 2: cbind(n_occ, n_trials - n_occ) ~ log_reads
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1        23     36.563                          
+2        22     13.912  1   22.651 1.943e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Assay effect on intercept (log_reads vs log_reads + assay):
+Analysis of Deviance Table
+
+Model 1: cbind(n_occ, n_trials - n_occ) ~ log_reads
+Model 2: cbind(n_occ, n_trials - n_occ) ~ log_reads + assay
+  Resid. Df Resid. Dev Df Deviance Pr(>Chi)
+1        53     63.673                     
+2        52     63.146  1   0.5262   0.4682
+
+Assay effect on slope (log_reads + assay vs log_reads * assay):
+Analysis of Deviance Table
+
+Model 1: cbind(n_occ, n_trials - n_occ) ~ log_reads + assay
+Model 2: cbind(n_occ, n_trials - n_occ) ~ log_reads * assay
+  Resid. Df Resid. Dev Df Deviance Pr(>Chi)  
+1        52     63.146                       
+2        51     58.291  1   4.8552  0.02756 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Interaction model coefficients:
+                        Estimate Std. Error    z value   Pr(>|z|)
+(Intercept)           -0.2923521  0.5386556 -0.5427439 0.58730612
+log_reads              0.6945022  0.2712462  2.5604123 0.01045481
+assayLR-PCR           -1.6459661  1.0193611 -1.6147037 0.10637487
+log_reads:assayLR-PCR  1.2069841  0.5921454  2.0383238 0.04151756
